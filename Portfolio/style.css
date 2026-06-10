@@ -72,7 +72,7 @@ ul { list-style: none; }
 /* === RESUME BUTTON === */
 .nav-resume-btn {
   border: 1.5px solid var(--primary) !important;
-  color: #545353e6 !important;
+  color: #e6e4e4e6 !important;
   padding: 0.4rem 1rem;
   border-radius: 6px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -223,10 +223,10 @@ ul { list-style: none; }
 }
 
 .about-left p {
-  color: var(--gray);
+  color: #222222;
   line-height: 1.8;
   font-size: 1rem;        /* remove font-family: monospace */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Monaco, monospace;
 }
 
 /* === ABOUT RIGHT === */
@@ -278,9 +278,14 @@ ul { list-style: none; }
 }
 
 #experience{
-  padding: 4rem 6rem;
+  padding: 0rem 6rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   background-color: transparent;
   margin-bottom: 2rem;
+  max-width: 1332px;        /* match .about-card max-width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .experience-header{
@@ -288,9 +293,9 @@ ul { list-style: none; }
 }
 
 .section-label{
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: var(--gray);
+  color: #0F172A;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 0.4rem;
@@ -340,10 +345,6 @@ ul { list-style: none; }
   background-color: var(--primary);
   border: 4px solid #d9d6d6;   /* matches your page background */
   z-index: 1;
-}
-
-.timeline-dot--gray{
-  background-color: var(--border);
 }
 
 .timeline-card{
@@ -404,15 +405,19 @@ color: var(--gray);
 
 .entry-description {
   font-size: 0.95rem;
-  color: var(--gray);
+  color: #222222;
   line-height: 1.7;
   margin-bottom: 1rem;
+}
+#github-link{
+  color: var(--primary);
 }
 
 .entry-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: 0.8rem;
 }
 
 .entry-tags li {
@@ -599,19 +604,17 @@ footer {
   color: var(--white);
   text-align: center;
   padding: 1rem 2rem;
-  padding-top: 5px;
+  padding-top: 15px;
 }
 
-.footer-github img {
+.footer-links img {
   width: 30px;
-  height: 30px;
+  height: auto;
+  border-radius: 4px;
 }
-.footer-github span {
-  font-size: 0.85rem;
-  color: #CBD5E1;
-}
+
 .footer-links{
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 4rem;
 }
